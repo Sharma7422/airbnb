@@ -117,19 +117,6 @@ app.use("/", userRouter);
 
 
 
-// app.get("/textListing", async (req, res)=>{
-//    let sampleListing = new Listing({
-//     title: "My new Villa",
-//     description: "By the beach",
-//     price: 1200,
-//     location: "Pune",
-//     country: "India",
-//    });
-
-//    await sampleListing.save();
-//    console.log("sample was send");
-//    res.send("successful");
-// });
 
 app.all("*", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
